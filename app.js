@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 
 // 在Express.js中
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // 或者指定具体的域名
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
+    res.setHeader('Access-Control-Allow-Origin', 'https://whitezerooooo.github.io');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
 });
 
 app.post('/simulate-click', async (req, res) => {
