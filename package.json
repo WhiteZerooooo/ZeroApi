@@ -1,0 +1,17 @@
+{
+  "name": "zeroapi",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "api share",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
+  }
+}
