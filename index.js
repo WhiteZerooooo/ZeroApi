@@ -1,5 +1,5 @@
-import express from 'express';
 import bodyParser from 'body-parser';
+import express from 'express';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -38,11 +38,11 @@ app.post('/simulate-click', async (req, res) => {
         res.send(response.data);
     } catch (error) {
         if (error.response) {
-            res.status(error.response.status).send(error.response.data);
+            res.status(201).send(error.response.data);
         } else if (error.request) {
-            res.status(500).send('请求超时');
+            res.status(201).send('请求超时');
         } else {
-            res.status(500).send('请求发生错误');
+            res.status(201).send('请求发生错误');
         }
     }
 });
